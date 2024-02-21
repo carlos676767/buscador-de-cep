@@ -7,12 +7,14 @@ const buscarCep = () => {
  
   exibir.innerHTML = `
   Bairro: ${data.bairro}<br>
-  cep: ${data.cep}<br> 
-  comprimento:  ${data.complemento} <br>
-  ddd: ${data.ddd} <br>
-  localidade: ${data.localidade}`;
+  Cep: ${data.cep}<br> 
+  Comprimento:  ${data.complemento} <br>
+  Ddd: ${data.ddd} <br>
+  Localidade: ${data.localidade} <br>
+  Uf: ${data.uf}`;
   })
   .catch(erro=> {
+    exibir.textContent = `Cep nao encontrado`
     console.error("erro", erro)
   })
 }
